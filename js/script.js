@@ -68,4 +68,5 @@ contactForm?.addEventListener("submit", async (event) => {
   } finally {
     submitButton.disabled = false;
   }
+    const API_URL = "https://portfolio-t20f.onrender.com";
 });
