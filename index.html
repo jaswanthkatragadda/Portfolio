@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jaswanth — Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ============ NAV ============ -->
+  <header class="site-header">
+    <div class="nav-inner">
+      <a href="#top" class="brand">Jaswanth</a>
+      <nav aria-label="Primary">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links">
+          Menu
+        </button>
+
+        <ul id="nav-links" class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <button id="theme-toggle" type="button" aria-label="Switch to dark theme">
+          🌙
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+      <p class="eyebrow">Computer Science Student</p>
+      <h1>Hi, I'm Jaswanth.</h1>
+      <p class="hero-lede">
+        I like taking problems apart until they make sense, then building
+        something that works. Right now I'm sharpening my algorithms,
+        working through database coursework, and getting hands-on with
+        agile software practice.
+      </p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn-primary">See my projects</a>
+        <a href="#contact" class="btn btn-secondary">Get in touch</a>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section id="about" class="section about">
+      <h2>About me</h2>
+      <p>
+        I'm a computer science student focused on algorithms, databases,
+        and software engineering practice. Replace this paragraph with a
+        bit more about your background — what you're studying, what
+        you're curious about, and what kind of work you're looking for.
+      </p>
+      <ul class="focus-list">
+        <li>Algorithms</li>
+        <li>Databases</li>
+        <li>Software Engineering</li>
+      </ul>
+    </section>
+
+    <!-- ============ PROJECTS ============ -->
+    <section id="projects" class="section projects">
+      <h2>Projects</h2>
+      <div class="project-grid">
+
+        <article class="project-card">
+          <h3>Project One</h3>
+          <p>One or two sentences on what this project does and the problem it solves. Replace this with your own summary.</p>
+          <ul class="tags">
+            <li>Language</li>
+            <li>Framework</li>
+            <li>Tool</li>
+          </ul>
+          <div class="card-links">
+            <a href="#">Live demo</a>
+            <a href="#">Source code</a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <h3>Project Two</h3>
+          <p>Swap in your second project here — what you built, why, and what you learned building it.</p>
+          <ul class="tags">
+            <li>Language</li>
+            <li>Framework</li>
+            <li>Tool</li>
+          </ul>
+          <div class="card-links">
+            <a href="#">Live demo</a>
+            <a href="#">Source code</a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <h3>Project Three</h3>
+          <p>A third project slot — coursework, a hackathon build, or something you made for fun all belong here.</p>
+          <ul class="tags">
+            <li>Language</li>
+            <li>Framework</li>
+            <li>Tool</li>
+          </ul>
+          <div class="card-links">
+            <a href="#">Live demo</a>
+            <a href="#">Source code</a>
+          </div>
+        </article>
+
+      </div>
+      <p class="section-hint">Copy a .project-card block in index.html to add more projects.</p>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section id="contact" class="section contact">
+      <h2>Get in touch</h2>
+      <p>Send me a message and I will get back to you.</p>
+
+      <div class="contact-buttons">
+        <a class="btn btn-primary" href="https://github.com/your-username"
+           target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a class="btn btn-secondary" href="https://linkedin.com/in/your-username"
+           target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </div>
+
+      <form id="contact-form" class="contact-form">
+        <label for="name">Name</label>
+        <input id="name" type="text" name="name" autocomplete="name"
+               placeholder="Your name" required maxlength="100">
+
+        <label for="email">Email</label>
+        <input id="email" type="email" name="email" autocomplete="email"
+               placeholder="Your email" required maxlength="254">
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="6"
+                   placeholder="Your message" required maxlength="5000"></textarea>
+
+        <button class="btn btn-primary" type="submit">Send message</button>
+        <p id="form-status" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Jaswanth. Built with HTML, CSS, and JavaScript.</p>
+  </footer>
+
+
+  <script src="js/script.js"></script>
+</body>
+</html>
