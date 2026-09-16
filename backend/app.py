@@ -94,12 +94,9 @@ def messages():
     return jsonify([dict(row) for row in rows])
 
 
-@app.route("/", methods=["GET"])
+@app.get("/")
 def home():
-    return jsonify({
-        "status": "online",
-        "message": "Portfolio backend is running"
-    })
+    return jsonify(status="online", message="Portfolio backend is running")
 
 
 if __name__ == "__main__":
