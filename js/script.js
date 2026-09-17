@@ -1,6 +1,7 @@
 // Mobile nav toggle
 const navToggle = document.querySelector(".nav-toggle");
 const navLinks = document.getElementById("nav-links");
+const API_URL = "https://portfolio-t20f.onrender.com";
 
 navToggle?.addEventListener("click", () => {
   const isOpen = navLinks.classList.toggle("is-open");
@@ -70,5 +71,5 @@ contactForm?.addEventListener("submit", async (event) => {
   } finally {
     submitButton.disabled = false;
   }
-    const API_URL = "https://portfolio-t20f.onrender.com";
+
 });
