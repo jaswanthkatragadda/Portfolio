@@ -42,11 +42,8 @@ const formStatus = document.getElementById("form-status");
 contactForm?.addEventListener("submit", async (event) => {
   event.preventDefault();
 
-  const submitButton = contactForm.querySelector("button[type='submit']");
-  const formData = Object.fromEntries(new FormData(contactForm));
-
   formStatus.textContent = "Sending...";
-  submitButton.disabled = true;
+  const formData = Object.fromEntries(new FormData(contactForm));
 
   try {
     const response = await fetch(`${API_URL}/api/contact`, {
@@ -60,16 +57,12 @@ contactForm?.addEventListener("submit", async (event) => {
     const result = await response.json();
 
     if (!response.ok) {
-      throw new Error(result.error || "Unable to send your message.");
+      throw new Error(result.error || "Unable to send message.");
     }
 
-    formStatus.textContent = result.message;
+    formStatus.textContent = "Message sent successfully.";
     contactForm.reset();
   } catch (error) {
-    formStatus.textContent =
-      error.message || "Unable to connect to the server.";
-  } finally {
-    submitButton.disabled = false;
+    formStatus.textContent = error.message;
   }
-
 });
